@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+    <meta charset="UTF-8">
+
+    <title>Coding Test by Andrew</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <script src="js/bootstrap.min.js" >  </script>
+
+
+</head>
+
+<body>
+
+<div class="col-md-6">
+    <h1> Add a client </h1>
+
+       <form  action="data.php" method="POST" id="form"   >
+
+        <div class="form-group">
+           <label class="control-label col-sm-3" for="firstName">First Name:</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="firstName" name="firstName" required="true" maxlength="50" placeholder="Enter first name">
+        </div>
+
+
+            <div class="form-group">
+                    <label class="control-label col-sm-3" for="lastName">Last Name:</label>
+                    <div class="col-sm-8">
+                    <input type="text" class="form-control" id="lastName" name="lastName" required="true" maxlength="50" placeholder="Enter last name">
+                    </div>
+            </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="email">Email:</label>
+                    <div class="col-sm-8 ">
+                    <input type="email" class="form-control" id="email" name="email" maxlength="255" placeholder="Enter email">
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">School:</label>
+                       <div class="col-sm-8">
+                            <select class="form-control" required name="school" size="">
+                                <option value= '1'>Middlesex University</option>
+                                <option value= '2'>Cardiff University</option>
+                                <option value= '3'>University College London</option>
+                                <option value= '4'>Edmonton County</option>
+                            </select>
+                         <br>
+                         <button type="submit" style="width:100%" class="btn btn-info" value="Submit"> Submit</button>
+                       </div>
+                    </div>
+                </div>
+       </form>
+</div>
+
+<div class="com-md-6 text-center">
+    <br> <br>
+    <br><br>
+
+          <form  action="view.php" method="POST" id="printData">
+
+              <div class="col-md-5 text-center">
+                  <select class="form-control text-center" required name="schools" size="5">
+                      <option value="" disabled selected > Select School: </option>
+                      <option value= '1'>Middlesex University</option>
+                      <option value= '2'>Cardiff University</option>
+                      <option value= '3'>University College London</option>
+                      <option value= '4'>Edmonton County</option>
+                  </select>
+              </div>
+
+              <div class="pull-left">
+                  <button type="submit" class="btn btn-info" value="Submit"> Search </button>
+              </div>
+          </form>
+
+</div>
+</body>
+
+</html>
