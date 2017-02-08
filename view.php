@@ -3,10 +3,11 @@
  * Date: 04/02/2017
  * Time: 8:34 PM
  */
-include 'connect.php';#used in order to connect to the database.
+#used in order to connect to the database.
+include 'connect.php';
 #get connection variable from the connect.php file and store it in variable $connect.
 $connect = $_SESSION['connect'];
-#gets the posted school ID from the index.html file when the Display all clients of a school button is pressed.
+#gets the posted school ID from the index.html file when the search button is pressed.
 $schoolID = $_POST['schools'];
 #SQL query that is stored in $SQLQuery. joins the two tables ttcm represents toucantechmembers table and ltbs represents the ltblschool table. Joins the School_ID in both tables.
 $SQLQuery = ("SELECT ID, FirstName, LastName, Email, ttcm.School FROM toucantechmembers as ttcm JOIN ltblschool as ltbs ON ttcm.School_ID = ltbs.School_ID WHERE ttcm.School_ID = '$schoolID'");

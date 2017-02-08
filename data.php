@@ -3,8 +3,10 @@
  * Date: 03/02/2017
  * Time: 8:30 PM
  */
- include 'connect.php'; # file that connects to database
-$connect=$_SESSION['connect']; #used to get the connect variable from connect.php and store it in the variable $connect.
+# file that connects to database
+ include 'connect.php'; 
+#used to get the connect variable from connect.php and store it in the variable $connect.
+$connect=$_SESSION['connect']; 
 session_start();
 #gets the values entered by the user and stores it in a variable. it also escapes any special characters to help prevent SQL Injection.
 #gets ID from database and adds one to it.
@@ -34,7 +36,7 @@ if (mysqli_num_rows($fetchMemberTable) > 0)
             exit();
         }
         elseif($row['FirstName'] == $firstName && $row['LastName'] == $lastName && $row['Email'] == $email)
-        {
+        {    #if the firstname lastname and email are the same but they go to another school it sets the $ID variable to the ID of the user on the database.
             $ID = $row['ID'];
         }
     }
